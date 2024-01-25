@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+img {
+  width: 100%;
+  height: unset;
+}
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.sr-only {
+  position: absolute;
+  left: -9999px;
+}
+ul {
+  list-style: none;
+}
+button,
+a {
+  transition: 0.4s ease;
+}
+
+:is(button, a):is(:focus, :focus-visible, :focus-within):not(.attribution a) {
+  outline: #aaa dotted 3px;
+  outline-offset: 0.35rem;
+}
+:root {
+  --Green: hsl(75, 94%, 57%);
+  --White: hsl(0, 0%, 100%);
+  --Grey: hsl(0, 0%, 20%);
+  --Dark-Grey: hsl(0, 0%, 12%);
+  --Off-Black: hsl(0, 0%, 8%);
+}
+
+body {
+  min-height: 100svh;
+  font-family: "Inter", sans-serif;
+  display: grid;
+  place-items: center;
+  background: var(--Off-Black);
+  color: var(--White);
+  padding: 112px 0 116px;
+}
+
+main {
+  background: var(--Dark-Grey);
+  width: 90%;
+  max-width: 385px;
+  height: 584px;
+  max-height: 612px;
+  border-radius: 0.8rem;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.about {
+  display: grid;
+  gap: 16px;
+}
+
+.about p {
+  color: var(--Green);
+  font-weight: 700;
+  text-align: center;
+}
+
+.insight {
+  font-size: 0.88rem;
+}
+
+img {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+}
+ul {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin-top: -0.5rem;
+}
+
+ul li {
+  background: var(--Grey);
+  font-weight: 600;
+  width: 90%;
+  display: grid;
+  place-items: center;
+  height: 45px;
+  border-radius: 0.5rem;
+}
+
+a {
+  color: var(--White);
+}
+@media (min-width: 64rem) {
+  body {
+    padding: 0;
+  }
+  main {
+    height: 612px;
+    padding-top: 2.5rem;
+  }
+  h2 {
+    font-weight: 400;
+  }
+  ul li {
+    max-width: 304px;
+    cursor: pointer;
+    transition: 0.4s ease;
+  }
+  .about {
+    gap: 9px;
+  }
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.01rem;
+  }
+  .about p {
+    font-size: 0.87rem;
+    font-weight: 600;
+    letter-spacing: 0.01rem;
+  }
+  .insight {
+    font-weight: 400;
+  }
+
+  ul li:hover {
+    background: var(--Green);
+  }
+  ul li:hover a {
+    color: black;
+  }
+  a {
+    font-size: 0.88rem;
+  }
+}
