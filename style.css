@@ -113,7 +113,7 @@ a {
   }
   main {
     height: 612px;
-    padding-top: 2.5rem;
+    padding-block: 2.5rem;
   }
   h2 {
     font-weight: 400;
